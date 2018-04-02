@@ -8,6 +8,6 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 RUN mkdir /etc/nginx/ssl
 ADD default /etc/nginx/sites-available/default
 ADD index.html /var/www/html/index.html
-EXPOSE 80
+EXPOSE 8123
 
 CMD ["nginx"]
