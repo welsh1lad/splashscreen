@@ -3,7 +3,7 @@
  print " And runnin On Openshift Hostname Container ";
  echo gethostname(); 
  print " No connecting to database ";
- $mysqli = new mysqli("127.0.0.1", "admin", "password", "myphp");
+ $mysqli = new mysqli("mysql", "admin", "password", "myphp");
 
 ?>
 
