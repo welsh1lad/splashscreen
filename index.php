@@ -4,7 +4,6 @@
  echo gethostname(); 
  print " No connecting to database ";
  $mysqli = new mysqli(127.0.0.1, "admin", "password", "myphp");
- print $mysqli;
 
 ?>
 
