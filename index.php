@@ -9,8 +9,8 @@
  $dbdatabase = getenv("MYSQL_DATABASE");
  $dburl = $dbhost . ":" . $dbport;
  $hostname=gethostname();
- $ip = $_SERVER['SERVER_ADDR']
- $port = $_SERVER['SERVER_PORT']
+ $ip = $_SERVER['SERVER_ADDR'];
+ $port = $_SERVER['SERVER_PORT'];
  
  /* Connect to the mysql pod with dburl enviroment variable */
 
