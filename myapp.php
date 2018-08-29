@@ -6,10 +6,10 @@
  $dbroot= getenv("MYSQL_ROOT_PASSWORD");
  $dbdatabase = getenv("MYSQL_DATABASE");
  $dburl = $dbhost . ":" . $dbport;
- $connection = @mysqli_connect($dburl, $dbuser, $dbpwd);
+ $connection = new mysqli ($dburl, $dbuser, $dbpwd);
  print "!!! Running on IP Address ".$_SERVER['SERVER_ADDR']." on port ".$_SERVER['SERVER_PORT'];
  print " And runnin On Openshift Hostname Container ";
  echo gethostname(); 
- print $connection;
+ print_r ( $connection );
 ?>
 
