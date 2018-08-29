@@ -9,7 +9,6 @@
  $dbdatabase = getenv("MYSQL_DATABASE");
  $dburl = $dbhost . ":" . $dbport;
  $hostname=gethostname();
- $browser = get_browser();
  $ip = $_SERVER['SERVER_ADDR'];
  $port = $_SERVER['SERVER_PORT'];
  
@@ -23,8 +22,8 @@
 
 /* Insert data into mysql */
 
- $sql = "INSERT INTO Container (IpAddr, PortNumber, HostName, Browser)
-VALUES ($ip, $port, $hostname, $browser)";
+ $sql = "INSERT INTO Container (IpAddr, PortNumber, HostName)
+VALUES ($ip, $port, $hostname)";
 
  echo "/n";
  print_r ( $sql );
