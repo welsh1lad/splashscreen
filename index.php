@@ -6,7 +6,7 @@
  $dbuser = getenv("MYSQL_USER");
  $dbpwd = getenv("MYSQL_PASSWORD");
  $dbroot= getenv("MYSQL_ROOT_PASSWORD");
- $dbdatabase = getenv("MYSQL_DATABASE");
+ $db = getenv("MYSQL_DATABASE");
  $dburl = $dbhost . ":" . $dbport;
  $hostname=gethostname();
  $ip = $_SERVER['SERVER_ADDR'];
@@ -14,7 +14,7 @@
  
  /* Connect to the mysql pod with dburl enviroment variable */
 
- $connection = new mysqli ($dburl, $dbuser, $dbpwd,$dbdatabase);
+ $connection = new mysqli ($dburl, $dbuser, $dbpwd,$db);
 
 /* display ip address of running container and port */
  print "!!! Running on IP Address ".$_SERVER['SERVER_ADDR']." on port ".$_SERVER['SERVER_PORT'];
@@ -25,7 +25,9 @@
  $sql = "INSERT INTO Container (IpAddr, PortNumber, HostName)
 VALUES ($ip, $port, $hostname)";
 
- echo "/n";
+ echo "\n";
+ print_r ( $connection );
+ echo "\n";
  print_r ( $sql );
 
 if ($connection->query($sql) === TRUE) {
