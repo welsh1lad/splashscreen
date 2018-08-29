@@ -22,18 +22,13 @@
 
 /* Insert data into mysql */
 
- $sql = "INSERT INTO Container (IpAddr, PortNumber, HostName)
-VALUES ($ip, $port, $hostname)";
+ $sql = "INSERT INTO Container (IpAddr, PortNumber, HostName) VALUES ('${ip}', '${port}', '${hostname}')";
 
- echo "\n";
- print_r ( $connection );
- echo "\n";
- print_r ( $sql );
 
 if ($connection->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . $connection->error;
 }
 
 $connection->close();
