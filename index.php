@@ -11,6 +11,7 @@
  $hostname=gethostname();
  $ip = $_SERVER['SERVER_ADDR'];
  $port = $_SERVER['SERVER_PORT'];
+ /* new insert */
  $browser = get_browser(); 
  /* Connect to the mysql pod with dburl enviroment variable */
 
@@ -19,9 +20,11 @@
 /* display ip address of running container and port */
  print "!!! Running on IP Address ".$_SERVER['SERVER_ADDR']." on port ".$_SERVER['SERVER_PORT'];
  print " And running On Openshift Hostname Container ".$hostname;
+/* new insert */
  print " And my Browser is ".$browser;
 /* Insert data into mysql */
 
+/* new insert */
  $sql = "INSERT INTO Container (IpAddr, PortNumber, HostName,Browser) VALUES ('${ip}', '${port}', '${hostname}',${browser})";
 
 
