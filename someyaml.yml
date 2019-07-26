@@ -1,0 +1,7 @@
+---
+#this is not part of the myip just a test file.
+  hosts: localhost
+  become_user: rob
+  - name: this is some test yaml
+    comand: date
+    
